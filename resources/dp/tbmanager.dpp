@@ -1,0 +1,20 @@
+#Deployment Plugin Project File
+#Tue Apr 03 03:18:10 EEST 2018
+build.ant.name=<.>/resources/dp/tbmanager_build.xml
+build.dp.file=<.>/resources/dp/tbmanager.dp
+build.location=
+bundles.0.bundle_path=<.>/resources/plugins/gr.exmachina.tbmanager_1.0.0.201804030317.jar
+bundles.0.customizer=false
+bundles.0.headers.count=0
+bundles.0.missing=false
+bundles.0.name=bundles/gr.exmachina.tbmanager_1.0.0.201804030317.jar
+bundles.0.symbolic_name=gr.exmachina.tbmanager
+bundles.0.version=1.0.0.201804030317
+bundles.count=1
+certificates.count=0
+general.signbundles=false
+headers.other.headers=
+headers.symbolic.name=tbmanager
+headers.version=1.0.0
+resources.count=0
+

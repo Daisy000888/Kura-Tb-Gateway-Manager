@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData xmlns="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="en_us">
+    <OCD id="gr.exmachina.tbmanager.TbManager"
+        name="EXM Thingsboard Manager"
+        description="Thingsboard Manager">
+        
+        <Icon resource="https://thingsboard.io/images/favicon.png" size="32"/>
+
+        <AD id="tbgw.service_active"
+            name="Run Thingsboard Gateway service"
+            type="Boolean"
+            cardinality="0"
+            required="true"
+            default=""
+            description="You will be prompted to enter your root password."/>
+    </OCD>
+
+    <Designate pid="gr.exmachina.tbmanager.TbManager">
+        <Object ocdref="gr.exmachina.tbmanager.TbManager"/>
+    </Designate>
+</MetaData>
