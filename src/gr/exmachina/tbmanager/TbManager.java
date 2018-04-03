@@ -12,6 +12,12 @@ import org.osgi.service.component.ComponentContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * A configurable Kura bundle to start/stop an install tb-gateway service.
+ * 
+ * @author ExMachina
+ *
+ */
 public class TbManager implements ConfigurableComponent
 {
 
@@ -38,6 +44,7 @@ public class TbManager implements ConfigurableComponent
     /** Check if service alive interval (ms) */
     public static final int THREAD_ALIVE_CHECK_INTERVAL = 3000;
 
+    /** Set when thread updates config which causes next updated() call to be ignored */
     private static boolean m_ConfigUpdatedByThread = false;
 
     /**
