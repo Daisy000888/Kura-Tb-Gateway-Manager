@@ -2,8 +2,15 @@
 A Kura Bundle to manage the service of Thingsboard Gateway from Kura's web ui.
 
 ## Overview
-A combination of the the Thingsboard gateway (tb-gw from now on) with Kura's built in Artemis MQTT broker can be set up to forward telemetry data collected on Kura's Assets over modbus, to the Thingsboard IoT platform.
+
+![Architecture](images/architecture.png)
+
+A combination of the Thingsboard gateway (tb-gw from now on) with Kura's built in Artemis MQTT broker can be set up to forward telemetry data collected on Kura's Assets over modbus, to the Thingsboard IoT platform.
 Tb-gw is configured to subscribe to local Artemis MQTT, to which Assets, via Kura's Cloud Service forward their telemetry and everything is set up in the web UI with the help of Kura Wires graphs making it easier to change and test various configurations on the fly.
+
+This Kura bundle can be used to start and stop the thingsboard gateway service from Kura's web ui.
+
+![Bundle configuration screen](images/tbmanager_config.png)
 
 ## Installation
 
@@ -77,6 +84,11 @@ Kura Wires is an easy to use graphical tool to set up your devices and the inter
 4. Add a "Publisher" node. The publisher node represents a Cloud Service instance.
 5. Drag and connect the components with wires as seen in the picture below.
 
-By clicking "Apply" the graph is saved and is immediately ran.
+By clicking "Apply" the graph is saved and starts running immediately. Every X seconds the Timer node triggers the Asset node which in turn reads the data from modbus and sends it to the Publisher node.
 
-![Artemis MQTT setup screen](images/wires.png)
+![Kura Wires setup](images/wires.png)
+
+Depending on the tb-gw configuration, the assets appear automatically in Thingsboard under "Devices" and are ready to be added to dashboards for visualization.
+
+More information on how to set up a device dashboard in Thingsboard here: [Displaying the data in thingsboard](https://github.com/exmgr/Kura-Thingsboard-Bundle#displaying-the-data-in-thingboard)
+
