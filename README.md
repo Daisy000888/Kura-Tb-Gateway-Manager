@@ -23,7 +23,7 @@ ESF modbus driver must also be installed:
 
 ## Usage
 
-###Configuring Tb-Gateway 
+### Configuring Tb-Gateway 
 For installation and configuration of the tb-gateway check the official documentation [here](https://thingsboard.io/docs/iot-gateway/getting-started/).
 
 ### Setting up Artemis MQTT broker
@@ -58,11 +58,11 @@ To configure a cloud service instance:
 1. Click Cloud Services in Kura's web ui.
 2. Click "new" and in the drop down select "org.eclipse.kura.cloud.CloudService"
 3. For cloud service pid enter "org.eclipse.kura.cloud.CloudService-1"
-4. Under "MQTT Data transport" set
- - Broker url: "mqtt://localhost:1883" (which is the Artemis MQTT)
- - Username/password: Same values entered when configuring Artemis MQTT
- - Client id: Can be anything
- - Topic: Can be optionally changed, depending on how you configured tb-gw mapping above.
+4. Under "MQTT Data transport" set:
+   * Broker url: "mqtt://localhost:1883" (which is the Artemis MQTT)
+   * Username/password: Same values entered when configuring Artemis MQTT
+   * Client id: Can be anything
+   * Topic: Can be optionally changed, depending on how you configured tb-gw mapping above.
 5. Click "Apply" to save
 6. Click the intance we just created in the list and click "Connect". If the configuration was correct, "Status" will be "Connected".
 
